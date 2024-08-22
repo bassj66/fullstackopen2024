@@ -1,5 +1,4 @@
- ````
-  sequence Diagram
+ sequence Diagram
     participant user
     participant browser
     participant server
@@ -23,6 +22,7 @@ browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     deactivate server
  
 browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->>browser:[{content: "test2", date: "2024-08-21T20:12:01.178Z"}]
 
-``````
-
+browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server->>browser:[{message:"note created"}]
